@@ -1,3 +1,5 @@
 # pycach
 src/__pycache__
 
+#実行結果関連
+/results/

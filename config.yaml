@@ -2,7 +2,7 @@
 # 必要最小限の設定項目のみ
 
 # BERTモデル設定
-model_name: "cl-tohoku/bert-base-japanese-whole-word-masking"  # 日本語に最適
+model_name: "bert-base-multilingual-cased"  # 軽量モデル
 device: "auto"  # auto=GPU利用可能なら使用、なければCPU
 
 # 評価設定

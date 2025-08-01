@@ -14,7 +14,7 @@ R-TTV-demo/
 │   ├── core.py             # BERTエンベッダー + 評価エンジン
 │   └── visualization.py    # 可視化機能
 └── results/                # 実行結果
-    ├── esults.json
+    ├── evaluation_results.json
     ├── *.png               # グラフ
     ├── *.npy              # 類似度マトリクス
     └── metrics_summary.csv # CSV形式サマリー
@@ -127,39 +127,6 @@ F1スコア: 0.800
 - **domain_analysis.png**: ドメイン別分析（該当する場合）
 
 ## カスタマイズ
-
-### データセット形式
-
-```json
-{
-  "metadata": {
-    "name": "My Dataset",
-    "description": "説明"
-  },
-  "specifications": [
-    {
-      "id": 0,
-      "text": "ユーザーはログインできる",
-      "domain": "認証"
-    }
-  ],
-  "test_cases": [
-    {
-      "id": 0,
-      "text": "ログイン機能をテストする",
-      "domain": "認証"
-    }
-  ],
-  "ground_truth": [
-    {
-      "spec_id": 0,
-      "test_id": 0,
-      "relevance": 3,
-      "label": "完全一致"
-    }
-  ]
-}
-```
 
 **関連度レベル:**
 - `3`: 完全一致（直接対応）
