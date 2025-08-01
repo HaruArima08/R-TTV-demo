@@ -1,0 +1,22 @@
+# Requirements-Testcase Traceability Visualization Demo Configuration
+# 必要最小限の設定項目のみ
+
+# BERTモデル設定
+model_name: "cl-tohoku/bert-base-japanese-whole-word-masking"  # 日本語に最適
+device: "auto"  # auto=GPU利用可能なら使用、なければCPU
+
+# 評価設定
+default_threshold: 0.7  # デフォルトの類似度閾値
+thresholds: [0.5, 0.6, 0.7, 0.8, 0.9]  # 閾値探索用
+
+# 出力設定  
+output_dir: "./results"
+save_plots: true
+show_plots: true
+
+# データ設定
+default_dataset: "dataset.json"
+
+# パフォーマンス設定
+batch_size: 8  # メモリ使用量を抑制
+max_length: 256  # トークン長を短縮（仕様・テストは短文が多い）
